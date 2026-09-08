@@ -165,7 +165,7 @@ export default function Home() {
               alt="Портрет Екатерины Козиной"
             />
           </div>
-          <p className="portrait-note">Москва · готова к удалённой работе</p>
+          <p className="portrait-note">Санкт-Петербург · готова к удалённой работе</p>
         </div>
       </section>
 
