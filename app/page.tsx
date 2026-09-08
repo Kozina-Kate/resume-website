@@ -157,9 +157,14 @@ export default function Home() {
           <a className="scroll-cue" href="#skills">Смотреть резюме <ArrowDownRight /></a>
         </div>
 
-        <div className="portrait-wrap" aria-label="Место для портретной фотографии">
+        <div className="portrait-wrap">
           <div className="portrait-grid" aria-hidden="true" />
-          <div className="portrait-placeholder"><span>Место для фото</span></div>
+          <div className="portrait-placeholder portrait-photo">
+            <img
+              src="/images/ekaterina-kozina-portrait-purple.jpg"
+              alt="Портрет Екатерины Козиной"
+            />
+          </div>
           <p className="portrait-note">Москва · готова к удалённой работе</p>
         </div>
       </section>
