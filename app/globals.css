@@ -360,7 +360,7 @@ h1 span { color: var(--pink); text-shadow: 0 0 30px rgb(255 98 211 / 33%); }
 .experience-section { border-block: 1px solid var(--line); background: linear-gradient(155deg, #0d1023, #090b18 56%, #110b24); }
 .experience-inner, .education-inner { width: min(1180px, calc(100% - 48px)); margin: 0 auto; padding: 128px 0; }
 .jobs-list { border-top: 1px solid var(--line); }
-.job { display: grid; grid-template-columns: 31% 1fr; gap: 40px; padding: 58px 0 62px; border-bottom: 1px solid var(--line); }
+.job { display: grid; grid-template-columns: minmax(190px, 24%) 1fr; gap: 32px; padding: 58px 0 62px; border-bottom: 1px solid var(--line); }
 .job-meta { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; color: var(--pink); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .75rem; letter-spacing: .05em; }
 .job-meta strong { padding: 6px 9px; border: 1px solid rgb(255 98 211 / 24%); border-radius: 4px; background: rgb(255 98 211 / 6%); color: #c9d3f2; font-size: .68rem; font-weight: 560; }
 .job-company { margin: 0 0 8px; color: var(--cyan); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .72rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
