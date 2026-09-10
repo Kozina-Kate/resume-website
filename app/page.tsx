@@ -1,22 +1,10 @@
 import {
   ArrowDownRight,
-  ArrowUpRight,
-  ChevronDown,
-  Mail,
-  MessageCircle,
-  Phone,
   Quote,
   Sparkles,
 } from 'lucide-react';
 
-import { Button } from '@/components/ui/button';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+import { ContactMenu } from '@/components/contact-menu';
 
 export const dynamic = 'force-static';
 
@@ -228,7 +216,7 @@ export default function Home() {
           <p className="eyebrow">Открыта к интересным проектам</p>
           <h1>Екатерина<br />Козина<span>.</span></h1>
           <p className="hero-role">Фронтенд-разработчик · Технический менеджер</p>
-          <p className="hero-summary">
+          <div className="hero-summary">
             <ul>
             <li>· 5+ лет опыта в Яндексе и Wargaming.</li>
             <li>· Специализируюсь на JavaScript, TypeScript и React: продуктовые страницы, лендинги, веб-приложения.</li>
@@ -237,32 +225,10 @@ export default function Home() {
             <li>· 350+ страниц в проде.</li>
             <li>· Применяю AI-инструменты для ускорения разработки и автоматизации рутины.</li>
             </ul>
-          </p>
+          </div>
 
           <div className="hero-actions">
-            <DropdownMenu>
-              <DropdownMenuTrigger
-                render={<Button className="contact-button" size="lg">Связаться <ChevronDown /></Button>}
-              />
-              <DropdownMenuContent className="contact-menu" align="start">
-                <DropdownMenuLabel>Удобный способ связи</DropdownMenuLabel>
-                <DropdownMenuItem
-                  render={<a href="https://t.me/katiakozina" target="_blank" rel="noreferrer" aria-label="Написать Екатерине в Telegram" />}
-                >
-                  <MessageCircle /> Telegram <span className="menu-contact">@katiakozina</span>
-                </DropdownMenuItem>
-                <DropdownMenuItem
-                  render={<a href="tel:+79313416433" aria-label="Позвонить Екатерине" />}
-                >
-                  <Phone /> Позвонить <span className="menu-contact">+7 931 341-64-33</span>
-                </DropdownMenuItem>
-                <DropdownMenuItem
-                  render={<a href="mailto:kozina-dev@mail.ru" aria-label="Написать Екатерине по электронной почте" />}
-                >
-                  <Mail /> Почта <span className="menu-contact">kozina-dev@mail.ru</span>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <ContactMenu placement="hero" />
 
             <div className="social-links" aria-label="Социальные сети">
               <a href="https://vk.ru/kozina_ka" target="_blank" rel="noreferrer" aria-label="Профиль Екатерины ВКонтакте">VK</a>
@@ -400,29 +366,7 @@ export default function Home() {
       <footer>
         <div className="footer-top">
           <p>Есть задача, которую<br />стоит обсудить?</p>
-          <DropdownMenu>
-            <DropdownMenuTrigger
-              render={<Button className="footer-contact" size="lg">Написать мне <ArrowUpRight /></Button>}
-            />
-            <DropdownMenuContent className="contact-menu" align="end">
-              <DropdownMenuLabel>Удобный способ связи</DropdownMenuLabel>
-              <DropdownMenuItem
-                render={<a href="https://t.me/katiakozina" target="_blank" rel="noreferrer" aria-label="Написать Екатерине в Telegram" />}
-              >
-                <MessageCircle /> Telegram <span className="menu-contact">@katiakozina</span>
-              </DropdownMenuItem>
-              <DropdownMenuItem
-                render={<a href="tel:+79313416433" aria-label="Позвонить Екатерине" />}
-              >
-                <Phone /> Позвонить <span className="menu-contact">+7 931 341-64-33</span>
-              </DropdownMenuItem>
-              <DropdownMenuItem
-                render={<a href="mailto:kozina-dev@mail.ru" aria-label="Написать Екатерине по электронной почте" />}
-              >
-                <Mail /> Почта <span className="menu-contact">kozina-dev@mail.ru</span>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <ContactMenu placement="footer" />
         </div>
         <div className="footer-bottom">
           <span>© 2026 Екатерина Козина</span>
