@@ -4,6 +4,7 @@ import {
   ArrowDownRight,
   ArrowUpRight,
   ChevronDown,
+  Mail,
   MessageCircle,
   Phone,
   Quote,
@@ -255,6 +256,11 @@ export default function Home() {
                 >
                   <Phone /> Позвонить <span className="menu-contact">+7 931 341-64-33</span>
                 </DropdownMenuItem>
+                <DropdownMenuItem
+                  render={<a href="mailto:kozina-dev@mail.ru" aria-label="Написать Екатерине по электронной почте" />}
+                >
+                  <Mail /> Почта <span className="menu-contact">kozina-dev@mail.ru</span>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
@@ -409,6 +415,11 @@ export default function Home() {
                 render={<a href="tel:+79313416433" aria-label="Позвонить Екатерине" />}
               >
                 <Phone /> Позвонить <span className="menu-contact">+7 931 341-64-33</span>
+              </DropdownMenuItem>
+              <DropdownMenuItem
+                render={<a href="mailto:kozina-dev@mail.ru" aria-label="Написать Екатерине по электронной почте" />}
+              >
+                <Mail /> Почта <span className="menu-contact">kozina-dev@mail.ru</span>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
