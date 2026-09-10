@@ -4,19 +4,15 @@ import type { CSSProperties } from 'react';
 import { useState } from 'react';
 import { PawPrint } from 'lucide-react';
 
-const pawTrails = [
-  { x: 20, y: -18, delay: 0, rotate: 30, tone: 'cyan' },
-  { x: 42, y: -30, delay: 65, rotate: 38, tone: 'pink' },
-  { x: 68, y: -36, delay: 130, rotate: 30, tone: 'cyan' },
-  { x: 25, y: 3, delay: 20, rotate: 86, tone: 'pink' },
-  { x: 51, y: 4, delay: 85, rotate: 96, tone: 'cyan' },
-  { x: 78, y: 8, delay: 150, rotate: 87, tone: 'pink' },
-  { x: 19, y: 20, delay: 40, rotate: 140, tone: 'cyan' },
-  { x: 41, y: 38, delay: 105, rotate: 150, tone: 'pink' },
-  { x: 65, y: 54, delay: 170, rotate: 142, tone: 'cyan' },
-  { x: -15, y: 18, delay: 60, rotate: 215, tone: 'pink' },
-  { x: -27, y: 35, delay: 125, rotate: 205, tone: 'cyan' },
-  { x: -38, y: 53, delay: 190, rotate: 214, tone: 'pink' },
+const pawTrail = [
+  { x: 42, y: -6, delay: 0, rotate: 84, tone: 'cyan' },
+  { x: 66, y: 7, delay: 110, rotate: 96, tone: 'pink' },
+  { x: 90, y: -7, delay: 220, rotate: 85, tone: 'cyan' },
+  { x: 114, y: 6, delay: 330, rotate: 95, tone: 'pink' },
+  { x: 138, y: -6, delay: 440, rotate: 84, tone: 'cyan' },
+  { x: 162, y: 7, delay: 550, rotate: 96, tone: 'pink' },
+  { x: 186, y: -7, delay: 660, rotate: 85, tone: 'cyan' },
+  { x: 210, y: 6, delay: 770, rotate: 95, tone: 'pink' },
 ] as const;
 
 export function AnimatedLogo() {
@@ -38,7 +34,7 @@ export function AnimatedLogo() {
       />
       {burstId > 0 && (
         <span className="logo-paw-burst" key={burstId} aria-hidden="true">
-          {pawTrails.map((paw, index) => (
+          {pawTrail.map((paw, index) => (
             <PawPrint
               className={`logo-paw logo-paw-${paw.tone}`}
               key={`${burstId}-${index}`}
