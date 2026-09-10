@@ -266,8 +266,8 @@ export default function Home() {
       <section className="content-section skills-section" id="skills">
         <SectionHeading
           number="01 / Инструменты"
-          title="Чем я владею"
-          text="Восемь направлений: от ключевых фронтенд-технологий до продуктовых процессов, бэкенда и AI-инструментов."
+          title="Мои навыки"
+          text="Ключевые фронтенд-технологии, процессы, бэкенд и AI-инструменты."
         />
         <div className="skills-grid">
           {skills.map((skill, index) => (
@@ -330,7 +330,7 @@ export default function Home() {
         <SectionHeading
           number="03 / Рекомендации"
           title="Что говорят коллеги"
-          text="Отзывы коллег и заказчиков, с которыми мы вместе запускали продукты, кампании и новые направления."
+          text="Отзывы коллег и заказчиков, с которыми вместе запускали продукты, кампании и новые направления."
         />
         <div className="reviews-grid">
           {reviews.map((review, index) => (
@@ -362,7 +362,7 @@ export default function Home() {
           <SectionHeading
             number="04 / Образование"
             title="Продолжаю развиваться"
-            text="Высшее образование и профессиональные программы по фронтенд-разработке, вёрстке и веб-дизайну."
+            text="Курсы повышения квалификации по фронтенд-разработке, вёрстке и веб-дизайну."
           />
           <div className="courses-list">
             {courses.map((course, index) => (
