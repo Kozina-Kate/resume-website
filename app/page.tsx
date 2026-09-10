@@ -297,14 +297,14 @@ export default function Home() {
                       </section>
                     ))}
                   </div>
-                  <div className="job-highlights">
-                    {job.highlights.map((highlight) => (
-                      <div className="achievement" key={highlight}>
-                        <Sparkles />
-                        <p><span>Ключевой результат</span>{highlight}</p>
-                      </div>
-                    ))}
-                  </div>
+                </div>
+                <div className="job-highlights">
+                  {job.highlights.map((highlight) => (
+                    <div className="achievement" key={highlight}>
+                      <Sparkles />
+                      <p><span>Ключевой результат</span>{highlight}</p>
+                    </div>
+                  ))}
                 </div>
               </article>
             ))}
