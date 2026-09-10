@@ -62,10 +62,15 @@ const jobs = [
       {
         title: 'Разработка',
         duties: [
-          'Разработала главные страницы сервисов practicum.yandex.ru и practicum.yandex.kz — ключевые точки входа для всего трафика.',
+          <>
+            Разработала <a href="https://practicum.yandex.ru/" target="_blank" rel="noreferrer">главную страницу Яндекс Практикума</a> и{' '}
+            <a href="https://practicum.yandex.kz/" target="_blank" rel="noreferrer">главную страницу Практикума в Казахстане</a> — ключевые точки входа для всего трафика.
+          </>,
           'Создала библиотеку переиспользуемых UI-компонентов, которые работают на 350+ продуктовых страницах в проде.',
           'Собрала и запустила несколько десятков лендингов курсов: проектировала техническое решение, реализовывала компоненты на TypeScript и React, настраивала маршрутизацию.',
-          'Разработала интерактивную страницу подбора курсов на чистом JavaScript — practicum.yandex.ru/promo/ai-course-quiz/.',
+          <>
+            Разработала интерактивную <a href="https://practicum.yandex.ru/promo/ai-course-quiz/" target="_blank" rel="noreferrer">страницу подбора курсов</a> на чистом JavaScript.
+          </>,
           'Реализовывала адаптивную кроссбраузерную вёрстку и интеграцию с REST API, CMS и внутренними сервисами.',
           'Участвовала в запуске направления высшего образования Яндекс Практикума: разрабатывала продуктовые страницы и баннеры для рекламных кампаний.',
           'Участвовала в выводе сервиса на международный домен.',
@@ -302,7 +307,7 @@ export default function Home() {
                           <h4>{section.title}</h4>
                           {'note' in section && section.note && <p>{section.note}</p>}
                         </div>
-                        <ul>{section.duties.map((duty) => <li key={duty}>{duty}</li>)}</ul>
+                        <ul>{section.duties.map((duty, dutyIndex) => <li key={`${section.title}-${dutyIndex}`}>{duty}</li>)}</ul>
                       </section>
                     ))}
                   </div>

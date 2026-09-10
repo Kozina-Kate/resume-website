@@ -414,6 +414,9 @@ h1 span { color: var(--pink); text-shadow: 0 0 30px rgb(255 98 211 / 33%); }
 .job-main ul { display: grid; gap: 12px; max-width: 760px; margin: 0; padding: 0; list-style: none; color: #a9b3d0; font-size: 1rem; line-height: 1.6; }
 .job-main li { display: grid; grid-template-columns: 16px 1fr; gap: 12px; }
 .job-main li::before { content: '›'; color: var(--cyan); }
+.job-main li a { color: #d7fffb; text-decoration-color: rgb(85 242 226 / 48%); text-underline-offset: .2em; transition: color .2s ease, text-decoration-color .2s ease, text-shadow .2s ease; }
+.job-main li a:hover { color: var(--cyan); text-decoration-color: var(--cyan); text-shadow: 0 0 12px rgb(85 242 226 / 32%); }
+.job-main li a:focus-visible { border-radius: 2px; outline: 2px solid var(--cyan); outline-offset: 3px; }
 .job-highlights { grid-column: 2; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; width: 100%; }
 .achievement { display: flex; gap: 14px; padding: 17px 19px; border: 1px solid rgb(155 109 255 / 30%); border-radius: 7px; background: linear-gradient(110deg, rgb(155 109 255 / 9%), rgb(255 98 211 / 4%)); }
 .achievement svg { width: 19px; flex: 0 0 auto; color: var(--pink); }
