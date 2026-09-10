@@ -307,7 +307,7 @@ export default function Home() {
                           <h4>{section.title}</h4>
                           {'note' in section && section.note && <p>{section.note}</p>}
                         </div>
-                        <ul>{section.duties.map((duty, dutyIndex) => <li key={`${section.title}-${dutyIndex}`}>{duty}</li>)}</ul>
+                        <ul>{section.duties.map((duty, dutyIndex) => <li key={`${section.title}-${dutyIndex}`}><span>{duty}</span></li>)}</ul>
                       </section>
                     ))}
                   </div>
