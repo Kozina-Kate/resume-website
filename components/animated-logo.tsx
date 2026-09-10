@@ -5,14 +5,14 @@ import { useState } from 'react';
 import { PawPrint } from 'lucide-react';
 
 const pawTrail = [
-  { x: 42, y: -6, delay: 0, rotate: 84, tone: 'cyan' },
-  { x: 66, y: 7, delay: 110, rotate: 96, tone: 'pink' },
-  { x: 90, y: -7, delay: 220, rotate: 85, tone: 'cyan' },
-  { x: 114, y: 6, delay: 330, rotate: 95, tone: 'pink' },
-  { x: 138, y: -6, delay: 440, rotate: 84, tone: 'cyan' },
-  { x: 162, y: 7, delay: 550, rotate: 96, tone: 'pink' },
-  { x: 186, y: -7, delay: 660, rotate: 85, tone: 'cyan' },
-  { x: 210, y: 6, delay: 770, rotate: 95, tone: 'pink' },
+  { x: 42, y: -6, delay: 0, rotate: 39, tone: 'cyan' },
+  { x: 66, y: 7, delay: 110, rotate: 51, tone: 'pink' },
+  { x: 90, y: -7, delay: 220, rotate: 40, tone: 'cyan' },
+  { x: 114, y: 6, delay: 330, rotate: 50, tone: 'pink' },
+  { x: 138, y: -6, delay: 440, rotate: 39, tone: 'cyan' },
+  { x: 162, y: 7, delay: 550, rotate: 51, tone: 'pink' },
+  { x: 186, y: -7, delay: 660, rotate: 40, tone: 'cyan' },
+  { x: 210, y: 6, delay: 770, rotate: 50, tone: 'pink' },
 ] as const;
 
 export function AnimatedLogo() {
