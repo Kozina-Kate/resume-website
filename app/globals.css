@@ -95,26 +95,20 @@ button, a { -webkit-tap-highlight-color: transparent; }
   border-bottom: 1px solid var(--line);
 }
 .brand {
-  width: 43px;
-  height: 43px;
-  display: grid;
-  place-items: center;
-  position: relative;
-  border: 1px solid rgb(85 242 226 / 64%);
+  width: 52px;
+  height: 52px;
+  display: block;
   border-radius: 8px;
-  background: rgb(12 20 41 / 72%);
-  color: var(--cyan);
-  font-size: .82rem;
-  font-weight: 850;
-  letter-spacing: .04em;
+  transition: filter .25s ease, transform .25s ease;
 }
-.brand::after {
-  content: '';
-  position: absolute;
-  inset: 4px;
-  border: 1px solid rgb(255 98 211 / 28%);
-  border-radius: 4px;
+.brand img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
 }
+.brand:hover { filter: drop-shadow(0 0 7px rgb(85 242 226 / 38%)) drop-shadow(0 0 10px rgb(255 98 211 / 24%)); transform: translateY(-1px); }
+.brand:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
 .site-header nav { display: flex; gap: 34px; font-size: .82rem; letter-spacing: .025em; }
 .site-header nav a { color: #9da7c5; transition: color .2s ease, text-shadow .2s ease; }
 .site-header nav a:hover { color: var(--cyan); text-shadow: 0 0 14px rgb(85 242 226 / 52%); }
