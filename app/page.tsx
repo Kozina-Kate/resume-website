@@ -207,7 +207,7 @@ export default function Home() {
           <a href="#skills">Навыки</a>
           <a href="#experience">Опыт</a>
           <a href="#recommendations">Отзывы</a>
-          <a href="#education">Обучение</a>
+          <a href="#education">Образование</a>
         </nav>
       </header>
 
@@ -341,14 +341,14 @@ export default function Home() {
           ))}
         </div>
         <p className="reviews-disclaimer">
-          Контакты авторов отзывов не публикуются. По запросу я готова предоставить их для подтверждения подлинности рекомендаций и получения дополнительного фидбека обо мне.
+          Контакты авторов отзывов не публикуются. Готова предоставить их по запросу для подтверждения подлинности рекомендаций и получения дополнительного фидбека обо мне.
         </p>
       </section>
 
       <section className="education-section" id="education">
         <div className="education-inner">
           <SectionHeading
-            number="04 / Обучение"
+            number="04 / Образование"
             title="Продолжаю развиваться"
             text="Профессиональные программы по фронтенд-разработке, вёрстке и веб-дизайну."
           />
