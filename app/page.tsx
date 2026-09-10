@@ -4,7 +4,6 @@ import {
   ArrowDownRight,
   ArrowUpRight,
   ChevronDown,
-  Mail,
   MessageCircle,
   Phone,
   Quote,
@@ -246,16 +245,22 @@ export default function Home() {
               />
               <DropdownMenuContent className="contact-menu" align="start">
                 <DropdownMenuLabel>Удобный способ связи</DropdownMenuLabel>
-                <DropdownMenuItem><MessageCircle /> Telegram <span className="menu-placeholder">добавим ссылку</span></DropdownMenuItem>
-                <DropdownMenuItem><MessageCircle /> MAX <span className="menu-placeholder">добавим ссылку</span></DropdownMenuItem>
-                <DropdownMenuItem><Phone /> Телефон <span className="menu-placeholder">добавим номер</span></DropdownMenuItem>
-                <DropdownMenuItem><Mail /> Почта <span className="menu-placeholder">добавим адрес</span></DropdownMenuItem>
+                <DropdownMenuItem
+                  render={<a href="https://t.me/katiakozina" target="_blank" rel="noreferrer" aria-label="Написать Екатерине в Telegram" />}
+                >
+                  <MessageCircle /> Telegram <span className="menu-contact">@katiakozina</span>
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  render={<a href="tel:+79313416433" aria-label="Позвонить Екатерине" />}
+                >
+                  <Phone /> Позвонить <span className="menu-contact">+7 931 341-64-33</span>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
             <div className="social-links" aria-label="Социальные сети">
-              <a href="#" aria-label="ВКонтакте">VK</a>
-              <a href="#" aria-label="LinkedIn">in</a>
+              <a href="https://vk.ru/kozina_ka" target="_blank" rel="noreferrer" aria-label="Профиль Екатерины ВКонтакте">VK</a>
+              <a href="https://www.linkedin.com/in/ekaterina-kozina-97a26a205/" target="_blank" rel="noreferrer" aria-label="Профиль Екатерины в LinkedIn">in</a>
             </div>
           </div>
 
@@ -394,10 +399,17 @@ export default function Home() {
               render={<Button className="footer-contact" size="lg">Написать мне <ArrowUpRight /></Button>}
             />
             <DropdownMenuContent className="contact-menu" align="end">
-              <DropdownMenuItem><MessageCircle /> Telegram</DropdownMenuItem>
-              <DropdownMenuItem><MessageCircle /> MAX</DropdownMenuItem>
-              <DropdownMenuItem><Phone /> Телефон</DropdownMenuItem>
-              <DropdownMenuItem><Mail /> Почта</DropdownMenuItem>
+              <DropdownMenuLabel>Удобный способ связи</DropdownMenuLabel>
+              <DropdownMenuItem
+                render={<a href="https://t.me/katiakozina" target="_blank" rel="noreferrer" aria-label="Написать Екатерине в Telegram" />}
+              >
+                <MessageCircle /> Telegram <span className="menu-contact">@katiakozina</span>
+              </DropdownMenuItem>
+              <DropdownMenuItem
+                render={<a href="tel:+79313416433" aria-label="Позвонить Екатерине" />}
+              >
+                <Phone /> Позвонить <span className="menu-contact">+7 931 341-64-33</span>
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
