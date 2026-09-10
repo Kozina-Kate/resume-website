@@ -407,12 +407,11 @@ h1 span { color: var(--pink); text-shadow: 0 0 30px rgb(255 98 211 / 33%); }
 
 .education-section { border-top: 1px solid var(--line); background: linear-gradient(145deg, #0c1022, #0e0a1c); }
 .courses-list { border-top: 1px solid var(--line); }
-.course { display: grid; grid-template-columns: 150px 1fr 32px; gap: 24px; align-items: center; padding: 34px 0; border-bottom: 1px solid var(--line); transition: padding-inline .25s ease, background .25s ease; }
-.course:hover { padding-inline: 14px; background: linear-gradient(90deg, rgb(85 242 226 / 5%), transparent); }
+.course { display: grid; grid-template-columns: 150px 1fr; gap: 24px; align-items: center; padding: 34px 0; border-bottom: 1px solid var(--line); transition: padding-inline .25s ease, background .25s ease; }
+.course:hover { padding-inline: 7px; background: linear-gradient(90deg, rgb(85 242 226 / 5%), transparent); }
 .course-year { color: var(--pink); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .82rem; }
 .course p { margin: 0 0 7px; color: var(--cyan); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 .course h3 { margin: 0; font-size: 1.08rem; font-weight: 590; line-height: 1.45; }
-.course > svg { width: 21px; color: #7380a3; }
 
 footer { padding: 96px max(24px, calc((100% - 1180px) / 2)); border-top: 1px solid rgb(85 242 226 / 24%); background: #05060f; color: white; }
 .footer-top { display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; padding-bottom: 88px; }
@@ -454,7 +453,7 @@ footer { padding: 96px max(24px, calc((100% - 1180px) / 2)); border-top: 1px sol
   .job-highlights { grid-template-columns: 1fr; }
   .review-card { display: block; }
   .review-screen { min-height: 290px; }
-  .course { grid-template-columns: 72px 1fr 24px; gap: 12px; }
+  .course { grid-template-columns: 72px 1fr; gap: 12px; }
   footer { padding-block: 72px; }
   .footer-top { align-items: flex-start; flex-direction: column; padding-bottom: 70px; }
   .footer-bottom { grid-template-columns: 1fr; }

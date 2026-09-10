@@ -357,7 +357,6 @@ export default function Home() {
               <article className="course" key={`${course.title}-${index}`}>
                 <span className="course-year">{course.year}</span>
                 <div><p>{course.provider}</p><h3>{course.title}</h3></div>
-                <ArrowUpRight aria-hidden="true" />
               </article>
             ))}
           </div>
