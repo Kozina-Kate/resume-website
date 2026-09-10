@@ -29,14 +29,46 @@ import {
 } from '@/components/ui/dropdown-menu';
 
 const skills = [
-  { group: 'Аналитика', title: 'Инструмент 01' },
-  { group: 'Визуализация', title: 'Инструмент 02' },
-  { group: 'Управление', title: 'Инструмент 03' },
-  { group: 'Автоматизация', title: 'Инструмент 04' },
-  { group: 'Коммуникация', title: 'Инструмент 05' },
-  { group: 'Исследования', title: 'Инструмент 06' },
-  { group: 'ИИ-инструменты', title: 'Инструмент 07' },
-  { group: 'Документация', title: 'Инструмент 08' },
+  {
+    group: 'Frontend core',
+    title: 'Основы фронтенда',
+    tools: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript'],
+  },
+  {
+    group: 'UI development',
+    title: 'Интерфейсы',
+    tools: ['React'],
+  },
+  {
+    group: 'Tooling',
+    title: 'Сборка и пакеты',
+    tools: ['Vite', 'npm'],
+  },
+  {
+    group: 'Version control',
+    title: 'Контроль версий',
+    tools: ['Git', 'GitHub'],
+  },
+  {
+    group: 'Product delivery',
+    title: 'Продуктовая разработка',
+    tools: ['Feature Flags', 'A/B testing', 'CMS'],
+  },
+  {
+    group: 'Backend',
+    title: 'Бэкенд',
+    tools: ['Node.js', 'Django'],
+  },
+  {
+    group: 'Data',
+    title: 'Базы данных',
+    tools: ['PostgreSQL', 'SQLite'],
+  },
+  {
+    group: 'Workflow',
+    title: 'Техменеджмент и AI',
+    tools: ['Atlassian Jira', 'Claude Code', 'Cursor', 'Codex'],
+  },
 ];
 
 const jobs = [
@@ -179,13 +211,16 @@ export default function Home() {
         <SectionHeading
           number="01 / Инструменты"
           title="Чем я владею"
-          text="Технический стек и организация процессов"
+          text="Восемь направлений: от ключевых фронтенд-технологий до продуктовых процессов, бэкенда и AI-инструментов."
         />
         <div className="skills-grid">
           {skills.map((skill, index) => (
-            <article className={`skill-card skill-card-${(index % 4) + 1}`} key={skill.title}>
+            <article className={`skill-card skill-card-${(index % 4) + 1}`} key={skill.group}>
               <div className="skill-topline"><span>{skill.group}</span><span>0{index + 1}</span></div>
               <h3>{skill.title}</h3>
+              <ul className="skill-tools" aria-label={`Инструменты: ${skill.title}`}>
+                {skill.tools.map((tool) => <li key={tool}>{tool}</li>)}
+              </ul>
             </article>
           ))}
         </div>
