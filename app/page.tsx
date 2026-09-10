@@ -186,6 +186,12 @@ const courses = [
   { year: '2022', provider: 'HTML Academy', title: 'HTML & CSS. Professional Website Coding' },
   { year: '2022', provider: 'HTML Academy', title: 'Email Coding' },
   { year: '2017', provider: 'St. Petersburg TV School', title: 'Web Design' },
+  {
+    year: null,
+    provider: 'Высшее образование',
+    title: 'Тюменский государственный нефтегазовый университет',
+    detail: 'Кафедра социальных технологий',
+  },
 ];
 
 function SectionHeading({ number, title, text }: { number: string; title: string; text: string }) {
@@ -357,13 +363,17 @@ export default function Home() {
           <SectionHeading
             number="04 / Образование"
             title="Продолжаю развиваться"
-            text="Профессиональные программы по фронтенд-разработке, вёрстке и веб-дизайну."
+            text="Высшее образование и профессиональные программы по фронтенд-разработке, вёрстке и веб-дизайну."
           />
           <div className="courses-list">
             {courses.map((course, index) => (
-              <article className="course" key={`${course.title}-${index}`}>
-                <span className="course-year">{course.year}</span>
-                <div><p>{course.provider}</p><h3>{course.title}</h3></div>
+              <article className={`course${course.year ? '' : ' course-degree'}`} key={`${course.title}-${index}`}>
+                {course.year && <span className="course-year">{course.year}</span>}
+                <div>
+                  <p>{course.provider}</p>
+                  <h3>{course.title}</h3>
+                  {'detail' in course && course.detail && <span className="course-detail">{course.detail}</span>}
+                </div>
               </article>
             ))}
           </div>
