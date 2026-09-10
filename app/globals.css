@@ -415,7 +415,7 @@ h1 span { color: var(--pink); text-shadow: 0 0 30px rgb(255 98 211 / 33%); }
 .job-main li { display: grid; grid-template-columns: 16px 1fr; gap: 12px; }
 .job-main li::before { content: '›'; color: var(--cyan); }
 .job-main li > span { min-width: 0; }
-.job-main li a { color: #d7fffb; text-decoration-color: rgb(85 242 226 / 48%); text-underline-offset: .2em; transition: color .2s ease, text-decoration-color .2s ease, text-shadow .2s ease; }
+.job-main li a { color: #d7fffb; text-decoration-line: underline; text-decoration-color: rgb(85 242 226 / 62%); text-decoration-thickness: 1px; text-underline-offset: .2em; transition: color .2s ease, text-decoration-color .2s ease, text-shadow .2s ease; }
 .job-main li a:hover { color: var(--cyan); text-decoration-color: var(--cyan); text-shadow: 0 0 12px rgb(85 242 226 / 32%); }
 .job-main li a:focus-visible { border-radius: 2px; outline: 2px solid var(--cyan); outline-offset: 3px; }
 .job-highlights { grid-column: 2; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; width: 100%; }
