@@ -4,6 +4,7 @@ import {
   Sparkles,
 } from 'lucide-react';
 
+import { AnimatedLogo } from '@/components/animated-logo';
 import { ContactMenu } from '@/components/contact-menu';
 
 export const dynamic = 'force-static';
@@ -208,14 +209,7 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="К началу страницы">
-          <img
-            src="images/ekaterina-kozina-logo.png"
-            alt=""
-            width="180"
-            height="180"
-          />
-        </a>
+        <AnimatedLogo />
         <nav aria-label="Навигация по странице">
           <a href="#skills">Навыки</a>
           <a href="#experience">Опыт</a>

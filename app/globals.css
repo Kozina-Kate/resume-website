@@ -98,17 +98,58 @@ button, a { -webkit-tap-highlight-color: transparent; }
   width: 52px;
   height: 52px;
   display: block;
+  position: relative;
+  flex: 0 0 auto;
+  padding: 0;
+  overflow: visible;
+  border: 0;
   border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  appearance: none;
   transition: filter .25s ease, transform .25s ease;
 }
 .brand img {
   width: 100%;
   height: 100%;
   display: block;
+  position: relative;
+  z-index: 1;
   object-fit: contain;
+  user-select: none;
 }
 .brand:hover { filter: drop-shadow(0 0 7px rgb(85 242 226 / 38%)) drop-shadow(0 0 10px rgb(255 98 211 / 24%)); transform: translateY(-1px); }
+.brand:active { transform: scale(.96); }
 .brand:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+.logo-paw-burst {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  pointer-events: none;
+}
+.logo-paw {
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation: logo-paw-trail 900ms cubic-bezier(.18, .72, .22, 1) var(--paw-delay) both;
+}
+.logo-paw-cyan { color: var(--cyan); filter: drop-shadow(0 0 4px rgb(85 242 226 / 90%)); }
+.logo-paw-pink { color: var(--pink); filter: drop-shadow(0 0 4px rgb(255 98 211 / 90%)); }
+@keyframes logo-paw-trail {
+  0% { opacity: 0; transform: translate(-50%, -50%) rotate(var(--paw-rotate)) scale(.25); }
+  18% { opacity: .96; }
+  68% { opacity: .82; }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--paw-x)), calc(-50% + var(--paw-y))) rotate(var(--paw-rotate)) scale(.92);
+  }
+}
 .site-header nav { display: flex; gap: 34px; font-size: .82rem; letter-spacing: .025em; }
 .site-header nav a { color: #9da7c5; transition: color .2s ease, text-shadow .2s ease; }
 .site-header nav a:hover { color: var(--cyan); text-shadow: 0 0 14px rgb(85 242 226 / 52%); }
