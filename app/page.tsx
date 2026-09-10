@@ -152,9 +152,10 @@ const reviews = [
 ];
 
 const courses = [
-  { year: '20XX', provider: 'Образовательная платформа', title: 'Название курса или программы повышения квалификации' },
-  { year: '20XX', provider: 'Учебный центр', title: 'Название курса или профессиональной специализации' },
-  { year: '20XX', provider: 'Образовательная платформа', title: 'Название интенсивной программы или сертификации' },
+  { year: '2025', provider: 'Яндекс Практикум', title: 'Frontend-разработчик' },
+  { year: '2022', provider: 'HTML Academy', title: 'HTML & CSS. Professional Website Coding' },
+  { year: '2022', provider: 'HTML Academy', title: 'Email Coding' },
+  { year: '2017', provider: 'St. Petersburg TV School', title: 'Web Design' },
 ];
 
 function SectionHeading({ number, title, text }: { number: string; title: string; text: string }) {
@@ -349,7 +350,7 @@ export default function Home() {
           <SectionHeading
             number="04 / Обучение"
             title="Продолжаю развиваться"
-            text="Курсы, сертификаты и программы повышения квалификации будут собраны в одной короткой и легко читаемой ленте."
+            text="Профессиональные программы по фронтенд-разработке, вёрстке и веб-дизайну."
           />
           <div className="courses-list">
             {courses.map((course, index) => (
