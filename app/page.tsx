@@ -1,5 +1,3 @@
-'use client';
-
 import {
   ArrowDownRight,
   ArrowUpRight,
@@ -19,6 +17,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+
+export const dynamic = 'force-static';
 
 const skills = [
   {
@@ -277,7 +277,7 @@ export default function Home() {
           <div className="portrait-grid" aria-hidden="true" />
           <div className="portrait-placeholder portrait-photo">
             <img
-              src="/images/ekaterina-kozina-portrait-purple.jpg"
+              src="images/ekaterina-kozina-portrait-purple.jpg"
               alt="Портрет Екатерины Козиной"
             />
           </div>
