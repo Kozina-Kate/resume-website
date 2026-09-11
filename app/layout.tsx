@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Екатерина Козина — резюме',
-  description: 'Персональный сайт-резюме Екатерины Козиной',
+  title: 'Екатерина Козина — создание сайтов',
+  description: 'Персональная страница разработчика и технического менеджера Екатерины Козиной',
 };
 
 export default function RootLayout({
