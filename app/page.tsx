@@ -1,5 +1,6 @@
 import {
   ArrowDownRight,
+  ArrowUpRight,
   Quote,
   Sparkles,
 } from 'lucide-react';
@@ -201,6 +202,24 @@ const courses = [
   },
 ];
 
+const projects = [
+  {
+    title: 'Оливье',
+    href: 'https://github.com/Kozina-Kate/olivier-menu',
+    description: 'Конструктор домашнего меню: помогает выбрать блюда и количество гостей, формирует общий список покупок, показывает пошаговые рецепты и подбирает блюда из продуктов, которые уже есть дома. Веб-интерфейс собран на React, TypeScript и Vite, API и админка — на Django REST Framework, данные хранятся в PostgreSQL.',
+  },
+  {
+    title: 'Курс по алгоритмам',
+    href: 'https://github.com/Kozina-Kate/algo-spellbook',
+    description: 'Пошаговый курс по алгоритмам и структурам данных на JavaScript с двумя маршрутами обучения, практикумом, 18 тематическими главами и быстрым справочником по языку. В проекте есть полнотекстовый поиск, адаптивная вёрстка и офлайн-режим PWA; сайт собран на Astro и Starlight и публикуется через GitHub Pages.',
+  },
+  {
+    title: 'Сайт-резюме',
+    href: 'https://github.com/Kozina-Kate/resume-website',
+    description: 'Этот самый сайт: адаптивное одностраничное резюме с навыками, опытом, пет-проектами, рекомендациями, образованием и контактами. Интерфейс разработан на React и TypeScript с использованием Vinext и Tailwind CSS, а версия для GitHub Pages собирается как статический сайт.',
+  },
+];
+
 function SectionHeading({ number, title, text }: { number: string; title: string; text: string }) {
   return (
     <div className="section-heading">
@@ -219,6 +238,7 @@ export default function Home() {
         <nav aria-label="Навигация по странице">
           <a href="#skills">Навыки</a>
           <a href="#experience">Опыт</a>
+          <a href="#projects">Пет-проекты</a>
           <a href="#recommendations">Отзывы</a>
           <a href="#education">Образование</a>
         </nav>
@@ -327,9 +347,33 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="content-section projects-section" id="projects">
+        <SectionHeading
+          number="03 / Пет-проекты"
+          title="Что я делаю сама"
+          text="Проекты, в которых я отвечаю за продуктовую идею, интерфейс и техническую реализацию."
+        />
+        <div className="projects-list">
+          {projects.map((project) => (
+            <a
+              className="project"
+              href={project.href}
+              target="_blank"
+              rel="noreferrer"
+              key={project.href}
+              aria-label={`${project.title} — открыть репозиторий на GitHub`}
+            >
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <ArrowUpRight aria-hidden="true" />
+            </a>
+          ))}
+        </div>
+      </section>
+
       <section className="content-section recommendations-section" id="recommendations">
         <SectionHeading
-          number="03 / Рекомендации"
+          number="04 / Рекомендации"
           title="Что говорят коллеги"
           text="Отзывы коллег и заказчиков, с которыми вместе запускали продукты, кампании и новые направления."
         />
@@ -361,7 +405,7 @@ export default function Home() {
       <section className="education-section" id="education">
         <div className="education-inner">
           <SectionHeading
-            number="04 / Образование"
+            number="05 / Образование"
             title="Продолжаю развиваться"
             text="Курсы повышения квалификации по фронтенд-разработке, вёрстке и веб-дизайну."
           />
