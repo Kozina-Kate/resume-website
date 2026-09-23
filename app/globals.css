@@ -433,9 +433,9 @@ h1 span { color: var(--pink); text-shadow: 0 0 30px rgb(255 98 211 / 33%); }
   align-items: start;
   padding: 34px 0;
   border-bottom: 1px solid var(--line);
-  transition: padding-inline .25s ease, background .25s ease;
+  transition: background .25s ease;
 }
-.project:hover { padding-inline: 7px; background: linear-gradient(90deg, rgb(85 242 226 / 5%), transparent); }
+.project:hover { background: linear-gradient(90deg, rgb(85 242 226 / 5%), transparent); }
 .project:focus-visible { border-radius: 4px; outline: 2px solid var(--cyan); outline-offset: 5px; }
 .project h3 { margin: 0; color: #f1f5ff; font-size: 1.28rem; font-weight: 590; letter-spacing: -.02em; line-height: 1.45; }
 .project p { margin: 0; color: #9da8c7; font-size: 1rem; line-height: 1.7; }
