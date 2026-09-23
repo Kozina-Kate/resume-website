@@ -209,7 +209,7 @@ const projects = [
     description: 'Конструктор домашнего меню с\u00A0двумя сценариями: выбираем блюда и\u00A0формируем список покупок исходя из\u00A0количества персон, либо подбираем блюда из\u00A0продуктов, которые уже есть дома. Единая база рецептов с\u00A0пошаговыми инструкциями для\u00A0обоих сценариев. Веб-интерфейс собран на\u00A0React, TypeScript и\u00A0Vite, API и\u00A0админка — на\u00A0Django REST Framework, данные хранятся в\u00A0PostgreSQL.',
   },
   {
-    title: 'Обучающий курс по\u00A0алгоритмам Algo Spellbook',
+    title: 'Обучающий курс по\u00A0алгоритмам Algo\u00A0Spellbook',
     href: 'https://github.com/Kozina-Kate/algo-spellbook',
     description: 'Пошаговый курс по\u00A0алгоритмам и\u00A0структурам данных на\u00A0JavaScript с\u00A0двумя маршрутами обучения, 18 тематическими главами и\u00A0быстрым справочником по\u00A0языку. В\u00A0проекте есть полнотекстовый поиск, адаптивная вёрстка и\u00A0офлайн-режим PWA; сайт собран на\u00A0Astro и\u00A0Starlight и\u00A0публикуется через\u00A0GitHub Pages.',
   },
@@ -346,7 +346,7 @@ export default function Home() {
       <section className="content-section projects-section" id="projects">
         <SectionHeading
           number="03 / Пет-проекты"
-          title="Мои личные проекты на GitHub"
+          title="Личные проекты на\u00A0GitHub"
           text={'Здесь я\u00A0отвечаю за\u00A0идеи, интерфейс, техническую реализацию\u00A0— в\u00A0общем, за\u00A0всё.'}
         />
         <div className="projects-list">
