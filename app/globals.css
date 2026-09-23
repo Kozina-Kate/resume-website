@@ -249,6 +249,7 @@ h1 span { color: var(--pink); text-shadow: 0 0 30px rgb(255 98 211 / 33%); }
   font-weight: 800;
   transition: border-color .25s ease, color .25s ease, box-shadow .25s ease, transform .25s ease;
 }
+.social-links svg { width: 19px; height: 19px; }
 .social-links a:hover { border-color: var(--cyan); color: var(--cyan); box-shadow: 0 0 15px rgb(85 242 226 / 22%); transform: translateY(-2px); }
 .scroll-cue {
   display: flex;
