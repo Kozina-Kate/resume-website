@@ -5,8 +5,8 @@ import {
   Sparkles,
 } from 'lucide-react';
 
-import { AnimatedLogo } from '@/components/animated-logo';
 import { ContactMenu } from '@/components/contact-menu';
+import { SiteHeader } from '@/components/site-header';
 
 export const dynamic = 'force-static';
 
@@ -233,16 +233,7 @@ function SectionHeading({ number, title, text }: { number: string; title: string
 export default function Home() {
   return (
     <main>
-      <header className="site-header">
-        <AnimatedLogo />
-        <nav aria-label="Навигация по странице">
-          <a href="#skills">Навыки</a>
-          <a href="#experience">Опыт</a>
-          <a href="#projects">Пет-проекты</a>
-          <a href="#recommendations">Отзывы</a>
-          <a href="#education">Образование</a>
-        </nav>
-      </header>
+      <SiteHeader />
 
       <section className="hero" id="top">
         <div className="hero-copy">
