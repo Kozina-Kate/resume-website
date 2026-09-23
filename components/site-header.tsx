@@ -31,7 +31,7 @@ export function SiteHeader() {
     <header className={`site-header${isMenuOpen ? ' site-header-menu-open' : ''}`}>
       <AnimatedLogo />
 
-      <nav className="desktop-navigation" aria-label="Навигация по странице">
+      <nav className="desktop-navigation" aria-label={'Навигация по\u00A0странице'}>
         {navigationItems.map((item) => (
           <a href={item.href} key={item.href}>{item.label}</a>
         ))}

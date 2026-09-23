@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 
 import { ContactMenu } from '@/components/contact-menu';
+import { NonBreakingText } from '@/components/non-breaking-text';
 import { SiteHeader } from '@/components/site-header';
 
 export const dynamic = 'force-static';
@@ -65,7 +66,7 @@ const jobs = [
         title: 'Разработка',
         duties: [
           <>
-            Разработала <a href="https://practicum.yandex.ru/" target="_blank" rel="noreferrer">главную страницу Яндекс Практикума</a> и{' '}
+            Разработала <a href="https://practicum.yandex.ru/" target="_blank" rel="noreferrer">главную страницу Яндекс Практикума</a>{' и\u00A0'}
             <a href="https://practicum.yandex.kz/" target="_blank" rel="noreferrer">главную страницу Практикума в Казахстане</a> — ключевые точки входа для всего трафика.
           </>,
           'Создала библиотеку переиспользуемых UI-компонентов, которые работают на 350+ продуктовых страницах в проде.',
@@ -232,6 +233,7 @@ function SectionHeading({ number, title, text }: { number: string; title: string
 
 export default function Home() {
   return (
+    <NonBreakingText>
     <main>
       <SiteHeader />
 
@@ -432,5 +434,6 @@ export default function Home() {
         </div>
       </footer>
     </main>
+    </NonBreakingText>
   );
 }

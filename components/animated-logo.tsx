@@ -22,7 +22,7 @@ export function AnimatedLogo() {
     <button
       className="brand"
       type="button"
-      aria-label="Запустить анимацию с неоновыми кошачьими лапками"
+      aria-label={'Запустить анимацию с\u00A0неоновыми кошачьими лапками'}
       onClick={() => setBurstId((current) => current + 1)}
     >
       <img

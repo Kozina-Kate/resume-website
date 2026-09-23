@@ -50,7 +50,7 @@ export function ContactMenu({ placement }: ContactMenuProps) {
                 href="https://t.me/katiakozina"
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Написать Екатерине в Telegram"
+                aria-label={'Написать Екатерине в\u00A0Telegram'}
               />
             }
           >
@@ -69,7 +69,7 @@ export function ContactMenu({ placement }: ContactMenuProps) {
             render={
               <a
                 href="mailto:kozina-dev@mail.ru"
-                aria-label="Написать Екатерине по электронной почте"
+                aria-label={'Написать Екатерине по\u00A0электронной почте'}
               />
             }
           >

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Екатерина Козина — создание сайтов и сервисов',
+  title: 'Екатерина Козина — создание сайтов и\u00A0сервисов',
   description: 'Персональная страница разработчика Екатерины Козиной',
 };
 
