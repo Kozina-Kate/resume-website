@@ -9,7 +9,7 @@ const shortWordPattern = /(^|[\s([{«„"—–-])(а|без|бы|в|во|да|�
 const textPropNames = ['aria-label', 'alt', 'label', 'text', 'title'] as const;
 
 export function preventHangingWords(text: string) {
-  let formattedText = text;
+  let formattedText = text.replaceAll('\\u00A0', '\u00A0');
   let previousText: string;
 
   do {

@@ -348,7 +348,7 @@ export default function Home() {
       <section className="content-section projects-section" id="projects">
         <SectionHeading
           number="03 / Пет-проекты"
-          title="Личные проекты на\u00A0GitHub"
+          title={'Личные проекты на\u00A0GitHub'}
           text={'Здесь я\u00A0отвечаю за\u00A0идеи, интерфейс, техническую реализацию\u00A0— в\u00A0общем, за\u00A0всё.'}
         />
         <div className="projects-list">
