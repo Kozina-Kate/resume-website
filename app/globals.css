@@ -437,11 +437,12 @@ h1 span { color: var(--pink); text-shadow: 0 0 30px rgb(255 98 211 / 33%); }
 }
 .project:hover { background: linear-gradient(90deg, rgb(85 242 226 / 5%), transparent); }
 .project:focus-visible { border-radius: 4px; outline: 2px solid var(--cyan); outline-offset: 5px; }
-.project h3 { margin: 0; color: #f1f5ff; font-size: 1.28rem; font-weight: 590; letter-spacing: -.02em; line-height: 1.45; }
-.project p { margin: 0; color: #9da8c7; font-size: 1rem; line-height: 1.7; }
+.project h3 { margin: 0; padding-left: 7px; color: #f1f5ff; font-size: 1.28rem; font-weight: 590; letter-spacing: -.02em; line-height: 1.45; transition: color .25s ease, transform .25s ease; }
+.project p { margin: 0; color: #9da8c7; font-size: 1rem; line-height: 1.7; transition: transform .25s ease; }
 .project svg { width: 21px; height: 21px; margin-top: 2px; color: var(--cyan); transition: filter .25s ease, transform .25s ease; }
 .project:hover h3 { color: var(--cyan); }
-.project:hover svg { filter: drop-shadow(0 0 8px rgb(85 242 226 / 60%)); transform: translate(3px, -3px); }
+.project:hover h3, .project:hover p { transform: translateX(7px); }
+.project:hover svg { filter: drop-shadow(0 0 8px rgb(85 242 226 / 60%)); transform: translate(7px, -3px); }
 
 .recommendations-section { padding-bottom: 144px; }
 .reviews-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; align-items: stretch; }
